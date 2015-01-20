@@ -1,7 +1,8 @@
 # What is this?
 
-A DSL for Lua 5.2+ that lets you write Lua code that resembles HTML. When
-you're done, you can render the tree it builds to actual HTML!
+A [DSL](http://en.wikipedia.org/wiki/Domain-specific_language) for Lua 5.2+
+that lets you write Lua code that resembles HTML. When you're done, you can
+render the tree it builds to actual HTML!
 
 # Example
 
