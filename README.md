@@ -81,7 +81,7 @@ combined.
 #### Example
 
 ```lua
-html.rendermixed {'hello', html.span 'world'}
+html.rendermixed {'hello ', html.span 'world'}
 -- hello <span>world</span>
 ```
 
@@ -93,7 +93,7 @@ an `<html>` element.
 #### Example
 
 ```lua
-(html {html.body {html.p 'hello world'}})
+(html {html.body {html.p 'hello world'}}):render()
 -- <html><body><p>hello world</p></body></html>
 ```
 
