@@ -71,11 +71,6 @@ children or attributes. The return value is an `element`.
 -- <ul class="list"><li>a</li><li>b</li></ul>
 ```
 
-```lua
-(html {html.body {html.p 'hello world'}})
--- <html><body><p>hello world</p></body></html>
-```
-
 ### `html.rendermixed(t)`
 
 Accepts a sequence table of either strings or HTML elements, and passes the
@@ -94,6 +89,13 @@ html.rendermixed {'hello', html.span 'world'}
 
 The HTML module is callable. It is equivalent to calling `html.html` to create
 an `<html>` element.
+
+#### Example
+
+```lua
+(html {html.body {html.p 'hello world'}})
+-- <html><body><p>hello world</p></body></html>
+```
 
 ## `element`s
 ### `element:render()`
