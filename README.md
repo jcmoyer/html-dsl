@@ -165,7 +165,7 @@ para:closetag()
 
 ### `html.element.type(t)`
 
-Returns the string `'element'` if `t` is a `table` whose metatable is
+Returns the string `'element'` if `t` is a `table` whose metatable indexes
 `html.element`. Otherwise, returns `nil`.
 
 # License
