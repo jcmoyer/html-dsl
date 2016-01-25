@@ -80,7 +80,10 @@ end
 function element:opentag()
   local t = {}
   for k,v in pairs(self.attrs) do
-    table.insert(t, k .. '=' .. '"' .. escapequotes(v) .. '"')
+    if type(v) == 'string' then
+      v = escapequotes(v)
+    end
+    table.insert(t, k .. '=' .. '"' .. v .. '"')
   end
   if #t > 0 then
     return '<' .. self.name .. ' ' .. table.concat(t, ' ') .. '>'
