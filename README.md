@@ -127,7 +127,10 @@ para:render()
 
 ### `element:addattr(name, value)`
 
-Adds an attribute to the element.
+Adds an attribute to the element. Attempting to add an attribute when one
+already exists with the same name will result in the first one being
+overwritten. When `value` is a `string`, embedded quotation marks will be
+escaped; otherwise, `value` remains untouched.
 
 #### Example
 
@@ -136,6 +139,22 @@ local para = html.p 'hello world'
 para:addattr('class', 'shiny')
 para:render()
 -- <p class="shiny">hello world</p>
+```
+
+```lua
+local para = html.p()
+para:addattr('class', 'old')
+para:addattr('class', 'new')
+para:render()
+-- <p class="new"></p>
+```
+
+```lua
+local para = html.p()
+para:addattr('data-desc', 'it is "cool"')
+para:addattr('data-value', 123)
+para:render()
+-- <p data-desc="it is \"cool\"" data-value="123"></p>
 ```
 
 ### `element:opentag()`
